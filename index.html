@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en" ng-app="myApp">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="favicon" href="favicon.ico">
+    <link rel="stylesheet" href="build/css/main.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link href="https://fonts.googleapis.com/css?family=Lato:300,400,700,900" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Playfair+Display:400,700,900" rel="stylesheet">
+    <script src="build/js/main.js"></script>
+    <title>C&B</title>
+
+</head>
+<body>
+
+<header class="nav">
+    <div class="head__top-menu clerfix">
+        <div class="content ">
+            <ul class="top-menu__list">
+                <li class="top-menu__list__item"><a class="top-menu__list__item-link" href="#/home">delivery</a>
+                </li>
+                <li class="top-menu__list__item"><a class="top-menu__list__item-link" href="#/about">faq</a></li>
+                <li class="top-menu__list__item"><a class="top-menu__list__item-link" href="#/contact">help</a></li>
+            </ul>
+            <span class="top-menu__language">
+                <p class="top-menu__language__text">en</p>
+                <!--<i class="fa fa-chevron-down down" aria-hidden="true"></i>-->
+                <img src="src/img/items/down.png" alt="">
+            </span>
+            <span class="top-menu__cash">
+                <p class="top-menu__cash__text">dollars</p>
+                <!--<i class="fa fa-chevron-down down" aria-hidden="true"></i>-->
+                <img src="src/img/items/down.png" alt="">
+            </span>
+        </div>
+    </div>
+    <div class="head__menu">
+        <div class="content content_head__menu ">
+            <a class="logo-link" href="#/">
+                <img src="src/img/items/logo.jpg" alt="">
+            </a>
+            <ul class="nav__list ">
+
+                <li class="nav__list__item nav__list__item_home"><a class="nav__list__item-link" href="#/home">Home</a>
+                </li>
+                <li class="nav__list__item"><a class="nav__list__item-link" href="#/about">catalog</a></li>
+                <li class="nav__list__item"><a class="nav__list__item-link" href="#/contact">news</a></li>
+                <li class="nav__list__item nav__list__item_sale"><a class="nav__list__item-link "
+                                                                    href="#/contact">sale</a></li>
+                <li class="nav__list__item  nav__list__item_about"><a class="nav__list__item-link "
+                                                                      href="#/about">about</a></li>
+                <li class="nav__list__item  nav__list__item_contact"><a class="nav__list__item-link " href="#/contact">contact</a>
+                </li>
+            </ul>
+            <span class="basket">
+               <p class="basket__text"> your bag</p>
+                <span class="basket__sum">2</span>
+                <span class="search">
+                    <img src="src/img/items/magnifier.png" alt="">
+                </span>
+            </span>
+        </div>
+    </div>
+
+</header>
+<section>
+    <div class="content">
+
+        <ng-view></ng-view>
+    </div>
+</section>
+
+<footer >
+    <div class="footer__menu ">
+        <div class="content content_footer__menu ">
+            <a class="logo-link" href="#/">
+                <img src="src/img/items/logo.jpg" alt="">
+            </a>
+            <ul class="nav__list ">
+
+                <li class="nav__list__item nav__list__item_home"><a class="nav__list__item-link" href="#/home">Home</a>
+                </li>
+                <li class="nav__list__item"><a class="nav__list__item-link" href="#/about">catalog</a></li>
+                <li class="nav__list__item"><a class="nav__list__item-link" href="#/contact">news</a></li>
+                <li class="nav__list__item "><a class="nav__list__item-link "
+                                                                    href="#/contact">sale</a></li>
+                <li class="nav__list__item "><a class="nav__list__item-link "
+                                                                      href="#/about">about</a></li>
+                <li class="nav__list__item "><a class="nav__list__item-link " href="#/contact">contact</a>
+                </li>
+            </ul>
+             <p class="copy">&copy; 2010-2016 All rights reserved</p>
+
+        </div>
+    </div>
+</footer>
+
+
+</body>
+</html>

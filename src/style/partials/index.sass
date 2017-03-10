@@ -1,0 +1,141 @@
+.clerfix
+	&:after
+		content: ''
+		clear: both
+		display: block
+		
+body
+	font-family: 'Lato', sans-serif
+
+.content
+	max-width: $container-width
+	margin: 0 auto
+	
+.head
+	&__top-menu
+		text-transform: uppercase
+		font-size: 11px
+		font-weight: bold
+		letter-spacing: 1px
+		height: 45px
+		line-height: 45px
+		border-bottom: 1px solid $gray-lite
+		
+	&__menu
+		text-transform: uppercase
+		font-size: 11px
+		font-weight: bold
+		letter-spacing: 1px
+		height: 100px
+		line-height: 100px
+		border-bottom: 1px solid $gray-lite
+		
+.footer__menu
+	text-transform: uppercase
+	font-size: 11px
+	font-weight: bold
+	letter-spacing: 1px
+	height: 100px
+	line-height: 100px
+.content_head__menu
+	//@include flex-mixin(space-between, center, row)
+	height: 100px
+	color: $secondary-gray
+.content_footer__menu
+	height: 100px
+	color: $primary-graphite
+.top-menu
+	
+	&__list
+		float: left
+		text-transform: uppercase
+		&__item-link
+			color: $secondary-gray
+			margin-right: 30px
+			
+		
+	&__cash
+		float: right
+		text-transform: uppercase
+		color: $secondary-gray
+		margin-right: 20px
+		&__text
+			display: inline-block
+			margin: 0
+			padding-right: 10px
+		
+		
+	&__language
+		float: right
+		text-transform: uppercase
+		color: $secondary-gray
+		border-left: 1px solid $gray-lite
+		&__text
+			display: inline-block
+			margin: 0
+			padding: 0 4px 0 19px
+	
+.down
+	&:before
+		font-size: 9px
+		color: $primary-graphite
+
+.logo
+	&-link
+		display: inline-block
+		height: 100px
+		line-height: 126px
+		float: left
+		margin-right: 188px
+		
+	
+.nav
+	&__list
+		display: inline-block
+		//width: 600px
+		&__item
+			float: left
+			margin-right: 55px
+			&_home
+				margin-right: 54px
+			&_sale
+				margin-right: 0
+			&_about
+				margin-left: 73px
+				margin-right: 54px
+			&_contact
+				margin: 0
+			
+			&-link
+				color: $secondary-gray
+				
+				font-weight: bold
+				letter-spacing: 1px
+				font-size: 12px
+		
+.basket
+	float: right
+	&__text
+		display: inline-block
+		margin: 0
+		padding: 0
+		letter-spacing: 1px
+		font-size: 12px
+		font-weight: bold
+		
+	&__sum
+		display: inline-block
+		height: 43px
+		width: 43px
+		line-height: 43px
+		text-align: center
+		border: 2px solid $primary-sharp-blue
+		border-radius: 50%
+		margin-right: 15px
+		margin-left: 10px
+		
+.copy
+	display: inline-block
+	float: right
+	text-transform: none
+	color: $secondary-gray

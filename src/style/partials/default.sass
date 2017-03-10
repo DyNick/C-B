@@ -1,0 +1,60 @@
+
+
+//breakpoints
+$mobile: 460px
+$tablet: 768px
+$laptop: 1224px
+$desktop: 1024px
+
+//media
+$mobile-media: 'only screen and (max-width: #{$mobile}'
+$tablet-media: 'only screen and (max-width: #{$tablet}'
+$laptop-media: 'only screen and (max-width: #{$laptop}'
+$desktop-media: 'only screen and (max-width: #{$desktop}'
+
+
+//width
+$container-width: 1140px
+
+//colors
+
+$primary-sharp-blue : #248edd
+$primary-red : #fc411d
+$primary-graphite : #333333
+$secondary-gray : #999999
+$gray-lite: #ededed
+
+
+// mixins
+
+@mixin flex-mixin($justify, $align, $flow)
+	display: flex
+	justify-content: $justify
+	align-items: $align
+	flex-flow: $flow
+
+@mixin button-mixin($bg-color, $color, $paddings)
+	padding: $paddings
+	background-color: $bg-color
+	border: 0
+	outline: none
+	font-weight: 600
+	color: $color
+	text-align: center
+	text-transform: uppercase
+
+
+ul
+	margin: 0
+	padding: 0
+	list-style-type: none
+
+a
+	text-decoration: none
+
+li
+	display: inline-block
+	
+p
+	margin: 0
+	padding: 0

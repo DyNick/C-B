@@ -11874,7 +11874,7 @@ function getter(obj, path, bindFnToScope) {
  * @returns {jqLite} jqLite collection containing the nodes
  */
 function getBlockNodes(nodes) {
-  // TODO(perf): just check if all items in `nodes` are siblings and if they are return the original
+  // TODO(perf): just check if all phones in `nodes` are siblings and if they are return the original
   //             collection, otherwise update the original collection.
   var node = nodes[0];
   var endNode = nodes[nodes.length - 1];
@@ -17270,7 +17270,7 @@ function $CompileProvider($provide, $$sanitizeUriProvider) {
      *        scope argument is auto-generated to the new child of the transcluded parent scope.
      * @param {DOMElement=} $rootElement If the nodeList is the root of the compilation tree then
      *        the rootElement must be set the jqLite collection of the compile root. This is
-     *        needed so that the jqLite collection items can be replaced with widgets.
+     *        needed so that the jqLite collection phones can be replaced with widgets.
      * @param {number=} maxPriority Max directive priority.
      * @returns {Function} A composite linking function of all of the matched directives or null.
      */
@@ -18416,7 +18416,7 @@ function $CompileProvider($provide, $$sanitizeUriProvider) {
 
 
     /**
-     * This is a special jqLite.replaceWith, which can replace items which
+     * This is a special jqLite.replaceWith, which can replace phones which
      * have no parents, provided that the containing jqLite collection is provided.
      *
      * @param {JqLite=} $rootElement The root of the compile tree. Used so that we can replace nodes
@@ -23882,7 +23882,7 @@ function $$RAFProvider() { //rAF
  *
  * Loop operations are optimized by using while(count--) { ... }
  *   - this means that in order to keep the same order of execution as addition we have to add
- *     items to the array at the beginning (unshift) instead of at the end (push)
+ *     phones to the array at the beginning (unshift) instead of at the end (push)
  *
  * Child scopes are created and removed often
  *   - Using an array would be slow since inserts in middle are expensive so we use linked list
@@ -24269,8 +24269,8 @@ function $RootScopeProvider() {
        * A variant of {@link ng.$rootScope.Scope#$watch $watch()} where it watches an array of `watchExpressions`.
        * If any one expression in the collection changes the `listener` is executed.
        *
-       * - The items in the `watchExpressions` array are observed via standard $watch operation and are examined on every
-       *   call to $digest() to see if any items changes.
+       * - The phones in the `watchExpressions` array are observed via standard $watch operation and are examined on every
+       *   call to $digest() to see if any phones changes.
        * - The `listener` is called whenever any expression in the `watchExpressions` array changes.
        *
        * @param {Array.<string|Function(scope)>} watchExpressions Array of expressions that will be individually
@@ -24351,13 +24351,13 @@ function $RootScopeProvider() {
        *
        * @description
        * Shallow watches the properties of an object and fires whenever any of the properties change
-       * (for arrays, this implies watching the array items; for object maps, this implies watching
+       * (for arrays, this implies watching the array phones; for object maps, this implies watching
        * the properties). If a change is detected, the `listener` callback is fired.
        *
        * - The `obj` collection is observed via standard $watch operation and is examined on every
-       *   call to $digest() to see if any items have been added, removed, or moved.
+       *   call to $digest() to see if any phones have been added, removed, or moved.
        * - The `listener` is called whenever anything within the `obj` has changed. Examples include
-       *   adding, removing, and moving items belonging to an object or array.
+       *   adding, removing, and moving phones belonging to an object or array.
        *
        *
        * # Example
@@ -24446,7 +24446,7 @@ function $RootScopeProvider() {
               changeDetected++;
               oldValue.length = oldLength = newLength;
             }
-            // copy the items to oldValue and look for changes.
+            // copy the phones to oldValue and look for changes.
             for (var i = 0; i < newLength; i++) {
               oldItem = oldValue[i];
               newItem = newValue[i];
@@ -24464,7 +24464,7 @@ function $RootScopeProvider() {
               oldLength = 0;
               changeDetected++;
             }
-            // copy the items to oldValue and look for changes.
+            // copy the phones to oldValue and look for changes.
             newLength = 0;
             for (key in newValue) {
               if (newValue.hasOwnProperty(key)) {
@@ -25414,7 +25414,7 @@ function $SceDelegateProvider() {
    *     provided.  This must be an array or null.  A snapshot of this array is used so further
    *     changes to the array are ignored.
    *
-   *     Follow {@link ng.$sce#resourceUrlPatternItem this link} for a description of the items
+   *     Follow {@link ng.$sce#resourceUrlPatternItem this link} for a description of the phones
    *     allowed in this array.
    *
    *     Note: **an empty whitelist array will block all URLs**!
@@ -25443,7 +25443,7 @@ function $SceDelegateProvider() {
    *     provided.  This must be an array or null.  A snapshot of this array is used so further
    *     changes to the array are ignored.
    *
-   *     Follow {@link ng.$sce#resourceUrlPatternItem this link} for a description of the items
+   *     Follow {@link ng.$sce#resourceUrlPatternItem this link} for a description of the phones
    *     allowed in this array.
    *
    *     The typical usage for the blacklist is to **block
@@ -27184,7 +27184,7 @@ function deepCompare(actual, expected, comparator, matchAgainstAnyProp, dontMatc
     return !deepCompare(actual, expected.substring(1), comparator, matchAgainstAnyProp);
   } else if (isArray(actual)) {
     // In case `actual` is an array, consider it a match
-    // if ANY of it's items matches `expected`
+    // if ANY of it's phones matches `expected`
     return actual.some(function(item) {
       return deepCompare(item, expected, comparator, matchAgainstAnyProp);
     });
@@ -34981,7 +34981,7 @@ var ngRepeatDirective = ['$parse', '$animate', function($parse, $animate) {
           collectionLength = collectionKeys.length;
           nextBlockOrder = new Array(collectionLength);
 
-          // locate existing items
+          // locate existing phones
           for (index = 0; index < collectionLength; index++) {
             key = (collection === collectionKeys) ? index : collectionKeys[index];
             value = collection[key];
@@ -35007,7 +35007,7 @@ var ngRepeatDirective = ['$parse', '$animate', function($parse, $animate) {
             }
           }
 
-          // remove leftover items
+          // remove leftover phones
           for (var blockKey in lastBlockMap) {
             block = lastBlockMap[blockKey];
             elementsToRemove = getBlockNodes(block.clone);
@@ -37706,7 +37706,7 @@ myApp.config([
                 controller: 'PhoneDetailCtrl'
             })
             .otherwise({
-                redirectTo: '/'
+                redirectTo: 'src/templates/home.html'
             });
     }
 ]);
@@ -37718,9 +37718,23 @@ myApp.filter('checkmark',function(){
 myApp.controller('ItemListCtrl', ['$scope', '$http', '$location', function ($scope, $http, $location) {
     $scope.title = 'Телефоны';
 
-    $http.get('src/phones/phones.json').success(function (data, status, headers, config) {
+    $http.get('src/phones/clothes.json').success(function (data, status, headers, config) {
         /*console.log('This is Data:', data, '\n\nThis is Status:', status, '\n\nThis is Headers:', headers, '\n\nThis is config:', config);*/
-        $scope.phones = data;
+        $scope.clothes = data;
+
+        $scope.disableClick = function () {
+            var result = document.getElementsByClassName("nav-action");
+            var wrappedResult = angular.element(result);
+            var windowWidth = angular.element(window);
+            wrappedResult.slideToggle(500);
+
+            windowWidth.bind('resize', function () {
+                if (windowWidth.width() > 500) {
+                    wrappedResult.removeAttr('style');
+                }
+            });
+
+        }
     });
 
 }]);

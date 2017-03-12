@@ -1,3 +1,180 @@
+.main
+	
+.catalog-head
+	font-family: 'Playfair Display', serif
+	font-size: 59px
+	font-weight: 300
+	margin-top: 88px
+	margin-bottom: 58px
+	text-align: center
+
+.item-section
+	width: 260px
+	display: inline-block
+	margin-right: 33px
+	margin-bottom: 33px
+	position: relative
+	&__button
+		&__link
+			display: block
+			width: 100%
+			height: 100%
+
+	@media (max-width: $laptop)
+		width: 25%
+		margin-right: 0
+		&__image
+			margin: 0 auto
+			display: block
+			height: 330px
+			width: 250px !important
+	@media (max-width: $desktop)
+		width: 33.33%
+		margin-right: 0
+	@media (max-width: $tablet)
+		width: 50%
+		margin-right: 0
+		&__image
+			height: 280px
+			width: 225px !important
+	@media (max-width: $mobile)
+		width: 100%
+		margin-right: 0
+		&__image
+			margin: 0 auto
+			display: block
+			height: 330px
+			width: 250px !important
+	&__image
+		height: 338px
+		width: 263px
+	&__label
+		position: absolute
+		&_new
+			display: block
+			text-align: center
+			top: 25px
+			left: 25px
+			font-size: 12px
+			width: 48px
+			text-transform: uppercase
+			height: 25px
+			line-height: 25px
+			border: 1px solid $primary-sharp-blue
+			border-radius: 15px
+			color: #fff
+			background-color: $primary-sharp-blue
+			@media (max-width: $desktop)
+				left: 50px
+			@media (max-width: $tablet)
+				left: 22%
+			@media (max-width: $mobile)
+				left: 28%
+	&__name
+		text-align: center
+		font-family: 'Playfair Display', serif
+		color: #333
+		margin-top: 20px
+		margin-bottom: 10px
+	&__price
+		text-align: center
+		&__current-price
+			color: $primary-red
+		&__old
+			//text-decoration: line-through
+			color: $secondary-gray
+		
+		
+
+	
+	&:nth-child(4n)
+		margin-right: 0
+
+.catalog-menu
+	width: 638px
+	font-size: 12px
+	margin: 10px auto 47px
+	@media (max-width: $tablet)
+		width: 100%
+	@media (max-width: $mobile)
+		width: 100%
+	&__list
+		&__item
+			margin-right: 55px
+			letter-spacing: 1px
+			font-weight: bold
+			&:last-child
+				margin-right: 0
+			&__link
+				color: $secondary-gray
+				padding: 0 0 7px 0
+				margin: 0
+				transform: perspective(1px) translateZ(0)
+				box-shadow: 0 0 1px transparent
+				position: relative
+				overflow: hidden
+				&:hover
+					&:before
+						left: 0
+						right: 0
+				&:before
+					content: ""
+					position: absolute
+					z-index: -1
+					left: 100%
+					right: 0
+					bottom: 0
+					background: $primary-sharp-blue
+					height: 2px
+					transition-property: left, right
+					transition-duration: 0.3s
+					transition-timing-function: ease-out
+				
+.load
+	text-align: center
+	font-size: 12px
+	letter-spacing: 1px
+	margin-top: 23px
+	margin-bottom: 56px
+	color: $secondary-gray
+.subscribe
+	background: url(/src/img/items/section.jpg) no-repeat center center
+	background-size: cover
+	height: 289px
+	&__text
+		text-align: center
+		text-transform: uppercase
+		color: #4a677b
+		padding-top: 65px
+		font-size: 12px
+		letter-spacing: 1px
+	&__head
+		text-align: center
+		font-family: 'Playfair Display', serif
+		color: #fff
+		font-size: 37px
+		letter-spacing: 1px
+		font-weight: 100
+		margin: 20px 0 25px
+		
+	&__button
+		font-size: 12px
+		display: block
+		color: #fff
+		width: 246px
+		border: 1px solid #fff
+		padding: 18px 25px
+		border-radius: 27px
+		margin: 0px auto
+		&__right
+			float: right
+			//margin-right: -7px
+			margin-top: 1px
+		&:hover
+			opacity: 0.7
+			border: 1px solid #4a677b
+			color: #4a677b
+			
 
 
 

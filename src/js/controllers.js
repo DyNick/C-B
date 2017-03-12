@@ -30,7 +30,7 @@ myApp.config([
                 controller: 'PhoneDetailCtrl'
             })
             .otherwise({
-                redirectTo: '/'
+                redirectTo: 'src/templates/home.html'
             });
     }
 ]);
@@ -42,9 +42,23 @@ myApp.filter('checkmark',function(){
 myApp.controller('ItemListCtrl', ['$scope', '$http', '$location', function ($scope, $http, $location) {
     $scope.title = 'Телефоны';
 
-    $http.get('src/phones/phones.json').success(function (data, status, headers, config) {
+    $http.get('src/phones/clothes.json').success(function (data, status, headers, config) {
         /*console.log('This is Data:', data, '\n\nThis is Status:', status, '\n\nThis is Headers:', headers, '\n\nThis is config:', config);*/
-        $scope.phones = data;
+        $scope.clothes = data;
+
+        $scope.disableClick = function () {
+            var result = document.getElementsByClassName("nav-action");
+            var wrappedResult = angular.element(result);
+            var windowWidth = angular.element(window);
+            wrappedResult.slideToggle(500);
+
+            windowWidth.bind('resize', function () {
+                if (windowWidth.width() > 500) {
+                    wrappedResult.removeAttr('style');
+                }
+            });
+
+        }
     });
 
 }]);

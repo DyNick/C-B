@@ -1,0 +1,74 @@
+[
+  {
+    "age": 0,
+    "id": "Printed swimsuit",
+    "imageUrl": "src/img/items/2.jpg",
+    "name": "Printed swimsuit",
+    "price": "$23",
+    "currentPrice": "",
+    "status": false
+  },
+  {
+    "age": 1,
+    "id": "Jogging bermuda short",
+    "imageUrl": "src/img/items/design.jpg",
+    "name": "Jogging bermuda short",
+    "price": "$36",
+    "currentPrice": "$12",
+    "status": false
+  },
+  {
+    "age": 2,
+    "id": "Basic baech fleap flops",
+    "imageUrl": "src/img/items/3.jpg",
+    "name": "Basic baech fleap flops",
+    "currentPrice": "",
+    "price": "$9",
+    "status": true
+  },
+  {
+    "age": 3,
+    "id": "Black sunglasses",
+    "imageUrl": "src/img/items/4.jpg",
+    "name": "Black sunglasses",
+    "currentPrice": "",
+    "price": "$29",
+    "status": false
+  },
+  {
+    "age": 4,
+    "id": "Long sleeved twill shirt",
+    "imageUrl": "src/img/items/5.jpg",
+    "name": "Long sleeved twill shirt",
+    "price": "20$",
+    "currentPrice": "",
+    "status": false
+  },
+  {
+    "age": 5,
+    "id": "Basic swimsuit",
+    "imageUrl": "src/img/items/6.jpg",
+    "name": "Basic swimsuit",
+    "price": "36$",
+    "currentPrice": "",
+    "status": false
+  },
+  {
+    "age": 6,
+    "id": "Bleached short",
+    "imageUrl": "src/img/items/7.jpg",
+    "name": "Bleached short",
+    "price": "$12",
+    "currentPrice": "",
+    "status": false
+  },
+  {
+  "age": 7,
+  "id": "T-shirt with lower panel",
+  "imageUrl": "src/img/items/8.jpg",
+  "name": "T-shirt with lower panel",
+  "price": "$32",
+  "currentPrice": "12",
+  "status": false
+  }
+]

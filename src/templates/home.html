@@ -1,47 +1,58 @@
 <div class="content">
-    <div class="search">
-        <h3 class="search__head">Search phones</h3>
-        <div class=" search__form">
-            <form>
-                <input type="text" class="search__form__input" placeholder="Search..." ng-model="search">
-            </form>
-        </div>
-    </div>
+      <div class="search">
+          <h3 class="search__head">Search phones</h3>
+          <div class=" search__form">
+              <form>
+                  <input type="text" class="search__form__input" placeholder="Search..." ng-model="search">
+              </form>
+          </div>
+      </div>
+    <h1 class="catalog-head">Catalog</h1>
 
-    <div class="phone-section" ng-repeat="phone in phones | filter:search">
-          <span class="phone-section__label"
-                ng-init="status = phone.status ? 'is available':'on order' "
-                ng-class="{'label-success': phone.status,'label-warning': !phone.status}">
+    <nav class="catalog-menu">
+        <ul class="catalog-menu__list">
+            <li class="catalog-menu__list__item"><a href="" class="catalog-menu__list__item__link">ALL</a></li>
+            <li class="catalog-menu__list__item"><a href="" class="catalog-menu__list__item__link">T-SHIRTS</a></li>
+            <li class="catalog-menu__list__item"><a href="" class="catalog-menu__list__item__link">SWEATERS</a></li>
+            <li class="catalog-menu__list__item"><a href="" class="catalog-menu__list__item__link">SHORTS</a></li>
+            <li class="catalog-menu__list__item"><a href="" class="catalog-menu__list__item__link">JACKETS</a></li>
+            <li class="catalog-menu__list__item"><a href="" class="catalog-menu__list__item__link">ACCESSOIRES</a></li>
+        </ul>
+    </nav>
+    <div class="main">
+        <div class="item-section" ng-repeat="unit in clothes | filter:search">
+            <a class="item-section__button__link" href="#phones/{{unit.id}}" role="">
+          <span class="item-section__label"
+                ng-init="status = unit.status ? 'new':'' "
+                ng-class="{'item-section__label_new': unit.status,'item-section__label_old': !unit.status}">
                 {{status}}
                 </span>
-        <h2 class="phone-section__head">{{phone.name}}</h2>
-        <img class="phone-section__image" ng-src="{{phone.imageUrl}}" alt="{{phone.name}}">
 
-        <h3 class="phone-section__title">Phone parameters: </h3>
-        <ul class="phone-section__list">
-            <li class="phone-section__list__item">{{phone.display}}</li>
-            <li class="phone-section__list__item">{{phone.camera}}</li>
-            <li class="phone-section__list__item">{{phone.os}}</li>
+                <img class="item-section__image" ng-src="{{unit.imageUrl}}" alt="{{unit.name}}">
+                <p class="item-section__name">{{unit.name}}</p>
+                <div class="item-section__price">
+                    <span class="item-section__price__old" id="old">{{unit.price}} </span>
+                    <span class="item-section__price__current-price" id="current-price">{{unit.currentPrice}}</span>
+                </div>
+                <!--<div class="mask"></div>-->
+                <!--<div class="mask-content">-->
+                    <!--<h3 class="mask-content__head">some</h3>-->
+                    <!--<a class="mask-content__button__link" href="#phones/{{unit.id}}" role="">link</a>-->
+                <!--</div>-->
 
-        </ul>
-
-        <div class="phone-section__button">
-            <div class="phone-section__button__price">
-                <span class="phone-section__button__price__title">Price:</span>
-                <span class="phone-section__button__price__total">{{phone.price}} </span>
-                <span class="phone-section__button__price__shipping">+12.99$ shipping</span>
-
-            </div>
-
-            <div class="phone-section__button__description">
-                <a class="phone-section__button__description-detail" href="#phones/{{phone.id}}" role="">View
-                    details </a>
-                <a class="phone-section__button__description-basket" href="#/}" role=""><i
-                        class="fa fa-shopping-cart phone-section__button__description-basket-cart"
-                        aria-hidden="true"></i>Add to
-                    cart </a>
-            </div>
+            </a>
         </div>
+        <p class="load">LOAD MORE...</p>
     </div>
 
+</div>
+<div class="subscribe">
+    <div class="content">
+        <p class="subscribe__text">subscribe</p>
+        <h1 class="subscribe__head">Stay updated on news</h1>
+        <a href="" class="subscribe__button">YOUR EMAIL ADDRESS
+           <!-- <img class="subscribe__button__right" src="src/img/items/right.png" alt="">-->
+            <i class="fa fa-chevron-right subscribe__button__right" aria-hidden="true"></i>
+        </a>
+    </div>
 </div>

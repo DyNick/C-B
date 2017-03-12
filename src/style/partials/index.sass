@@ -44,14 +44,36 @@ body
 .content_footer__menu
 	height: 100px
 	color: $primary-graphite
+
 .top-menu
 	
 	&__list
 		float: left
 		text-transform: uppercase
 		&__item-link
-			color: $secondary-gray
 			margin-right: 30px
+			color: $secondary-gray
+			padding: 0 0 7px 0
+			transform: perspective(1px) translateZ(0)
+			box-shadow: 0 0 1px transparent
+			position: relative
+			overflow: hidden
+			&:hover
+				&:before
+					left: 0
+					right: 0
+			&:before
+				content: ""
+				position: absolute
+				z-index: -1
+				left: 100%
+				right: 0
+				bottom: 0
+				background: $primary-sharp-blue
+				height: 3px
+				transition-property: left, right
+				transition-duration: 0.3s
+				transition-timing-function: ease-out
 			
 		
 	&__cash
@@ -59,10 +81,14 @@ body
 		text-transform: uppercase
 		color: $secondary-gray
 		margin-right: 20px
+		&:hover
+			cursor: pointer
+			
 		&__text
 			display: inline-block
 			margin: 0
 			padding-right: 10px
+		
 		
 		
 	&__language
@@ -70,6 +96,8 @@ body
 		text-transform: uppercase
 		color: $secondary-gray
 		border-left: 1px solid $gray-lite
+		&:hover
+			cursor: pointer
 		&__text
 			display: inline-block
 			margin: 0
@@ -87,15 +115,28 @@ body
 		line-height: 126px
 		float: left
 		margin-right: 188px
+		@media (max-width: $mobile)
+			margin-right: 10px
 		
 	
 .nav
 	&__list
 		display: inline-block
-		//width: 600px
+		@media (max-width: $mobile)
+			display: none
+			position: absolute
+			width: 100%
+			top: 135px
+			z-index: 1
+			height: 50px
+			line-height: 50px
 		&__item
 			float: left
 			margin-right: 55px
+			@media (max-width: $mobile)
+				float: none
+				display: block
+				margin: 0 !important
 			&_home
 				margin-right: 54px
 			&_sale
@@ -107,12 +148,47 @@ body
 				margin: 0
 			
 			&-link
-				color: $secondary-gray
-				
 				font-weight: bold
 				letter-spacing: 1px
 				font-size: 12px
-		
+				color: $secondary-gray
+				padding: 0 0 7px 0
+				margin: 0
+				transform: perspective(1px) translateZ(0)
+				box-shadow: 0 0 1px transparent
+				position: relative
+				overflow: hidden
+				@media (max-width: $mobile)
+					display: block
+					padding: 0
+					text-align: center
+					color: #fff
+					background-color: $secondary-gray
+					border-bottom: 1px solid #fff
+				&:hover
+					&:before
+						left: 0
+						right: 0
+				&:before
+					content: ""
+					position: absolute
+					z-index: -1
+					left: 100%
+					right: 0
+					bottom: 0
+					background: $primary-sharp-blue
+					height: 2px
+					transition-property: left, right
+					transition-duration: 0.3s
+					transition-timing-function: ease-out
+					@media (max-width: $mobile)
+						height: 0
+.menu-bar
+	color: #999
+	display: none
+	font-size: 16px
+	@media (max-width: $mobile)
+		display: inline-block
 .basket
 	float: right
 	&__text
@@ -134,8 +210,13 @@ body
 		margin-right: 15px
 		margin-left: 10px
 		
+.search
+	&:hover
+		cursor: pointer
 .copy
 	display: inline-block
 	float: right
 	text-transform: none
 	color: $secondary-gray
+	ont-size: 12px
+	letter-spacing: 1px

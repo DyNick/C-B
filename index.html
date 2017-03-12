@@ -12,7 +12,7 @@
     <title>C&B</title>
 
 </head>
-<body>
+<body ng-controller="ItemListCtrl">
 
 <header class="nav">
     <div class="head__top-menu clerfix">
@@ -40,7 +40,10 @@
             <a class="logo-link" href="#/">
                 <img src="src/img/items/logo.jpg" alt="">
             </a>
-            <ul class="nav__list ">
+            <span class="menu-bar" ng-click="disableClick()">
+                <i class="fa fa-bars" aria-hidden="true"></i>
+            </span>
+            <ul class="nav__list nav-action">
 
                 <li class="nav__list__item nav__list__item_home"><a class="nav__list__item-link" href="#/home">Home</a>
                 </li>
@@ -65,18 +68,17 @@
 
 </header>
 <section>
-    <div class="content">
 
         <ng-view></ng-view>
-    </div>
 </section>
 
 <footer >
-    <div class="footer__menu ">
+    <div class="footer__menu cliarfix">
         <div class="content content_footer__menu ">
             <a class="logo-link" href="#/">
                 <img src="src/img/items/logo.jpg" alt="">
             </a>
+
             <ul class="nav__list ">
 
                 <li class="nav__list__item nav__list__item_home"><a class="nav__list__item-link" href="#/home">Home</a>

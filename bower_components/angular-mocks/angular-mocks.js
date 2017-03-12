@@ -1996,15 +1996,15 @@ angular.module('ngMockE2E', ['ng']).config(['$provide', function($provide) {
  * ```js
  *   myAppDev = angular.module('myAppDev', ['myApp', 'ngMockE2E']);
  *   myAppDev.run(function($httpBackend) {
- *     phones = [{name: 'phone1'}, {name: 'phone2'}];
+ *     items = [{name: 'phone1'}, {name: 'phone2'}];
  *
- *     // returns the current list of phones
- *     $httpBackend.whenGET('/phones').respond(phones);
+ *     // returns the current list of items
+ *     $httpBackend.whenGET('/items').respond(items);
  *
- *     // adds a new phone to the phones array
- *     $httpBackend.whenPOST('/phones').respond(function(method, url, data) {
+ *     // adds a new phone to the items array
+ *     $httpBackend.whenPOST('/items').respond(function(method, url, data) {
  *       var phone = angular.fromJson(data);
- *       phones.push(phone);
+ *       items.push(phone);
  *       return [200, phone, {}];
  *     });
  *     $httpBackend.whenGET(/^\/templates\//).passThrough();

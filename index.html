@@ -16,7 +16,7 @@
 
 <header class="nav">
     <div class="head__top-menu clerfix">
-        <div class="content ">
+        <div class="content top-menu">
             <ul class="top-menu__list">
                 <li class="top-menu__list__item"><a class="top-menu__list__item-link" href="#/home">delivery</a>
                 </li>
@@ -45,54 +45,64 @@
             </span>
             <ul class="nav__list nav-action">
 
-                <li class="nav__list__item nav__list__item_home"><a class="nav__list__item-link" href="#/home">Home</a>
+                <li class="nav__list__item nav__list__item_home"><a class="nav__list__item-link" href="#/about">Home</a>
                 </li>
-                <li class="nav__list__item"><a class="nav__list__item-link" href="#/about">catalog</a></li>
+                <li class="nav__list__item"><a class="nav__list__item-link" href="#/home">catalog</a></li>
                 <li class="nav__list__item"><a class="nav__list__item-link" href="#/contact">news</a></li>
-                <li class="nav__list__item nav__list__item_sale"><a class="nav__list__item-link "
-                                                                    href="#/contact">sale</a></li>
+                <li class="nav__list__item nav__list__item_sale"><a
+                        class="nav__list__item-link nav__list__item-link_sale"
+                        href="#/sale">sale</a></li>
                 <li class="nav__list__item  nav__list__item_about"><a class="nav__list__item-link "
                                                                       href="#/about">about</a></li>
                 <li class="nav__list__item  nav__list__item_contact"><a class="nav__list__item-link " href="#/contact">contact</a>
                 </li>
             </ul>
             <span class="basket">
+            <span class="basket-cart">
+                <i class="fa fa-shopping-cart" aria-hidden="true"></i>
+            </span>
                <p class="basket__text"> your bag</p>
                 <span class="basket__sum">2</span>
-                <span class="search">
+                <span class="search" ng-click="searchClick()">
                     <img src="src/img/items/magnifier.png" alt="">
                 </span>
+
             </span>
+            <div class=" search__form">
+                <form>
+                    <input type="text" class="search__form__input" placeholder="Search..." ng-model="search">
+                </form>
+            </div>
         </div>
     </div>
 
 </header>
 <section>
 
-        <ng-view></ng-view>
+    <ng-view></ng-view>
 </section>
 
-<footer >
+<footer>
     <div class="footer__menu cliarfix">
         <div class="content content_footer__menu ">
             <a class="logo-link" href="#/">
                 <img src="src/img/items/logo.jpg" alt="">
             </a>
 
-            <ul class="nav__list ">
+            <ul class="nav__list nav__list_footer">
 
                 <li class="nav__list__item nav__list__item_home"><a class="nav__list__item-link" href="#/home">Home</a>
                 </li>
                 <li class="nav__list__item"><a class="nav__list__item-link" href="#/about">catalog</a></li>
                 <li class="nav__list__item"><a class="nav__list__item-link" href="#/contact">news</a></li>
                 <li class="nav__list__item "><a class="nav__list__item-link "
-                                                                    href="#/contact">sale</a></li>
+                                                href="#/contact">sale</a></li>
                 <li class="nav__list__item "><a class="nav__list__item-link "
-                                                                      href="#/about">about</a></li>
+                                                href="#/about">about</a></li>
                 <li class="nav__list__item "><a class="nav__list__item-link " href="#/contact">contact</a>
                 </li>
             </ul>
-             <p class="copy">&copy; 2010-2016 All rights reserved</p>
+            <p class="copy">&copy; 2010-2016 All rights reserved</p>
 
         </div>
     </div>

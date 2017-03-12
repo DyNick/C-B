@@ -37701,10 +37701,11 @@ myApp.config([
                 templateUrl: 'src/templates/contact.html',
                 controller: 'ContactCtrl'
             })
-            .when('/phones/:phoneId', {
-                templateUrl: 'src/templates/phone-detail.html',
-                controller: 'PhoneDetailCtrl'
+            .when('/sale', {
+                templateUrl: 'src/templates/sale.html',
+                controller: 'SaleCtrl'
             })
+
             .otherwise({
                 redirectTo: 'src/templates/home.html'
             });
@@ -37718,7 +37719,7 @@ myApp.filter('checkmark',function(){
 myApp.controller('ItemListCtrl', ['$scope', '$http', '$location', function ($scope, $http, $location) {
     $scope.title = 'Телефоны';
 
-    $http.get('src/phones/clothes.json').success(function (data, status, headers, config) {
+    $http.get('src/items/clothes.json').success(function (data, status, headers, config) {
         /*console.log('This is Data:', data, '\n\nThis is Status:', status, '\n\nThis is Headers:', headers, '\n\nThis is config:', config);*/
         $scope.clothes = data;
 
@@ -37735,10 +37736,26 @@ myApp.controller('ItemListCtrl', ['$scope', '$http', '$location', function ($sco
             });
 
         }
+        $scope.searchClick = function () {
+            var result = document.getElementsByClassName("search__form");
+            var wrappedResult = angular.element(result);
+            var windowWidth = angular.element(window);
+            wrappedResult.slideToggle(5);
+
+            windowWidth.bind('resize', function () {
+                if (windowWidth.width() > 500) {
+                    wrappedResult.removeAttr('style');
+                }
+            });
+
+        }
     });
 
 }]);
 myApp.controller('MainCtrl', ['$scope', '$http', '$location', function ($scope, $http, $location) {
+
+}]);
+myApp.controller('SaleCtrl', ['$scope', '$http', '$location', function ($scope, $http, $location) {
 
 }]);
 
@@ -37748,17 +37765,8 @@ myApp.controller('AboutCtrl', ['$scope', '$http', '$location', function ($scope,
 myApp.controller('ContactCtrl', ['$scope', '$http', '$location', function ($scope, $http, $location) {
 
 }]);
-myApp.controller('PhoneDetailCtrl', ['$scope', '$http', '$location', '$routeParams', function ($scope, $http, $location, $routeParams) {
-    $scope.phoneId = $routeParams.phoneId;
-    var url = 'src/phones/about/' + $routeParams.phoneId + '.json';
-    $http.get(url).success(function (data, status, headers, config) {
-        /*console.log('This is Data:', data, '\n\nThis is Status:', status, '\n\nThis is Headers:', headers, '\n\nThis is config:', config);*/
-        $scope.phone = data;
-        $scope.mainImageUrl = data.images[0];
-    });
-    $scope.setImage = function (imageUrl) {
-        $scope.mainImageUrl = imageUrl;
-    }
+myApp.controller('ItemDetailCtrl', ['$scope', '$http', '$location', '$routeParams', function ($scope, $http, $location, $routeParams) {
+
 }]);
 'use strict';
 

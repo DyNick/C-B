@@ -7,6 +7,9 @@
 	margin-top: 88px
 	margin-bottom: 58px
 	text-align: center
+	@media (max-width: $laptop)
+		font-size: 35px
+		margin-top: 58px
 
 .item-section
 	width: 260px
@@ -103,6 +106,11 @@
 			margin-right: 55px
 			letter-spacing: 1px
 			font-weight: bold
+			@media (max-width: $tablet)
+				width: 32%
+				text-align: center
+				padding-top: 20px
+				margin-right: 0
 			&:last-child
 				margin-right: 0
 			&__link
@@ -174,7 +182,8 @@
 			opacity: 0.7
 			border: 1px solid #4a677b
 			color: #4a677b
-			
+		@media (max-width: $tablet)
+			width: 185px
 
 
 

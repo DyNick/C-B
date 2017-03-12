@@ -21,6 +21,7 @@ body
 		line-height: 45px
 		border-bottom: 1px solid $gray-lite
 		
+		
 	&__menu
 		text-transform: uppercase
 		font-size: 11px
@@ -41,15 +42,27 @@ body
 	//@include flex-mixin(space-between, center, row)
 	height: 100px
 	color: $secondary-gray
+	position: relative
+	@media (max-width: $laptop)
+		margin-right: 1%
+		margin-left: 1%
+.nav__list_footer
+	@media (max-width: $desktop)
+		display: none !important
 .content_footer__menu
 	height: 100px
 	color: $primary-graphite
+	@media (max-width: $laptop)
+		margin-right: 1%
+		margin-left: 1%
 
 .top-menu
 	
 	&__list
 		float: left
 		text-transform: uppercase
+		@media (max-width: $laptop)
+			margin-left: 1%
 		&__item-link
 			margin-right: 30px
 			color: $secondary-gray
@@ -58,6 +71,8 @@ body
 			box-shadow: 0 0 1px transparent
 			position: relative
 			overflow: hidden
+			@media (max-width: $laptop)
+				margin-right: 15px
 			&:hover
 				&:before
 					left: 0
@@ -96,6 +111,8 @@ body
 		text-transform: uppercase
 		color: $secondary-gray
 		border-left: 1px solid $gray-lite
+		@media (max-width: $laptop)
+			margin-right: 1%
 		&:hover
 			cursor: pointer
 		&__text
@@ -112,11 +129,15 @@ body
 	&-link
 		display: inline-block
 		height: 100px
-		line-height: 126px
+		line-height: 120px
 		float: left
 		margin-right: 188px
-		@media (max-width: $mobile)
-			margin-right: 10px
+		@media (max-width: $desktop)
+			margin: 0 10px 0 0
+		@media (max-width: $tablet)
+			line-height: 120px
+		& img
+			width: 70px
 		
 	
 .nav
@@ -126,24 +147,39 @@ body
 			display: none
 			position: absolute
 			width: 100%
-			top: 135px
+			top: 101px
 			z-index: 1
 			height: 50px
 			line-height: 50px
 		&__item
 			float: left
-			margin-right: 55px
+			margin-right: 45px !important
+			@media (max-width: $tablet)
+				margin-right: 5px !important
 			@media (max-width: $mobile)
 				float: none
 				display: block
 				margin: 0 !important
 			&_home
 				margin-right: 54px
+				//@media (max-width: $tablet)
+				//	margin-right: 20px !important
+				@media (max-width: $mobile)
+					margin-right: 0px !important
 			&_sale
-				margin-right: 0
+				margin-right: 0 !important
+				//
+				//@media (max-width: $tablet)
+				//	margin-right: 20px !important
 			&_about
 				margin-left: 73px
 				margin-right: 54px
+				@media (max-width: $tablet)
+					margin-right: 10px !important
+					margin-left: 10px !important
+				@media (max-width: $mobile)
+					margin-right: 0px !important
+					margin-left: 0px !important
 			&_contact
 				margin: 0
 			
@@ -158,7 +194,10 @@ body
 				box-shadow: 0 0 1px transparent
 				position: relative
 				overflow: hidden
+				@media (max-width: $tablet)
+					font-size: 11px
 				@media (max-width: $mobile)
+					font-size: 11px
 					display: block
 					padding: 0
 					text-align: center
@@ -183,14 +222,38 @@ body
 					transition-timing-function: ease-out
 					@media (max-width: $mobile)
 						height: 0
+.nav__list__item-link_sale
+	color: $primary-red
 .menu-bar
 	color: #999
 	display: none
 	font-size: 16px
 	@media (max-width: $mobile)
 		display: inline-block
+		
+.search__form
+	display: none
+	position: absolute
+	width: 30%
+	top: 75px
+	@media (max-width: $tablet)
+		width: 98%
+		right: 1%
+		left: 1%
+		@media (max-width: $mobile)
+			top: 33px
+	&__input
+		height: 26px
+		width: 100%
 .basket
 	float: right
+	
+	&-cart
+		display: none
+	
+		@media (max-width: $desktop)
+			display: inline-block
+			font-size: 16px
 	&__text
 		display: inline-block
 		margin: 0
@@ -198,7 +261,8 @@ body
 		letter-spacing: 1px
 		font-size: 12px
 		font-weight: bold
-		
+		@media (max-width: $desktop)
+			display: none
 	&__sum
 		display: inline-block
 		height: 43px
@@ -209,6 +273,16 @@ body
 		border-radius: 50%
 		margin-right: 15px
 		margin-left: 10px
+		@media (max-width: $desktop)
+			display: inline-block
+			height: 15px
+			width: 15px
+			line-height: 15px
+			text-align: center
+			border: 2px solid $primary-sharp-blue
+			border-radius: 50%
+			margin-right: 10px
+			margin-left: 0px
 		
 .search
 	&:hover
